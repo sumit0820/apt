@@ -1,0 +1,33 @@
+{
+  "name": "apt-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint",
+    "seed": "tsx scripts/seed.ts",
+    "cron": "tsx scripts/cron-daily.ts",
+    "cron:once": "tsx scripts/cron-once.ts"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.1",
+    "next": "^15.5.4",
+    "node-cron": "^4.5.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^22.16.5",
+    "@types/react": "^19.2.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.8.3"
+  }
+}
