@@ -24,8 +24,8 @@ export function Hero() {
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_50%,var(--gold-soft),transparent_55%)]"
         />
 
-        <div className="relative z-10 flex flex-col pt-20 pb-10 sm:pt-24 lg:min-h-svh lg:justify-center lg:pt-28 lg:pb-12">
-          <div className="grid w-full min-w-0 items-start gap-8 lg:grid-cols-2 lg:items-end lg:gap-12 xl:gap-16">
+        <div className="relative z-10 flex flex-col pt-16 pb-10 sm:pt-20 lg:min-h-svh lg:justify-center lg:pt-24 lg:pb-12 xl:justify-end xl:pb-16 2xl:pb-20">
+          <div className="grid w-full min-w-0 -translate-y-[12%] items-start gap-8 sm:-translate-y-[16%] lg:grid-cols-2 lg:-translate-y-[20%] lg:items-end lg:gap-12 xl:translate-y-[4%] xl:gap-16 2xl:translate-y-[8%]">
             <div className="min-w-0 max-w-2xl lg:max-w-xl">
               <div className="hero-animate hero-delay-1 inline-flex max-w-full flex-wrap items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-3 py-1.5 text-[10px] font-bold tracking-wide text-primary shadow-[0_0_20px_-6px_var(--gold)] sm:text-xs">
                 <ShieldCheck className="h-3.5 w-3.5 shrink-0" /> SEBI REGISTERED RESEARCH ANALYST

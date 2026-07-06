@@ -172,6 +172,31 @@
   animation: hero-card-glow 3.2s ease-in-out infinite;
 }
 
+.hero-stats-band {
+  background: linear-gradient(
+    180deg,
+    oklch(0.14 0.006 60) 0%,
+    oklch(0.17 0.008 70 / 95%) 50%,
+    oklch(0.14 0.006 60) 100%
+  );
+}
+
+.hero-stats-panel {
+  background: linear-gradient(
+    145deg,
+    oklch(0.19 0.008 65 / 88%) 0%,
+    oklch(0.16 0.006 60 / 92%) 100%
+  );
+}
+
+.hero-stats-grid-bg {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 3%) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse 85% 70% at 50% 50%, black 20%, transparent 100%);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-bg-zoom,
   .hero-animate,
