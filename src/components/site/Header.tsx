@@ -41,7 +41,7 @@ export function Header({ logoOnly = false }: HeaderProps) {
       }`}
     >
       <div
-        className={`mx-auto flex max-w-7xl items-center gap-3 px-4 py-2 sm:px-6 ${
+        className={`mx-auto flex max-w-7xl items-center gap-3 px-4 py-1.5 sm:px-6 ${
           logoOnly ? "justify-start" : "justify-between"
         }`}
       >
@@ -71,13 +71,13 @@ export function Header({ logoOnly = false }: HeaderProps) {
             <div className="hidden lg:flex items-center gap-3">
               <Link
                 to="/auth/login"
-                className="inline-flex items-center gap-2 rounded-md border border-border bg-transparent px-4 py-2 text-sm font-medium hover:bg-surface"
+                className="inline-flex items-center gap-2 rounded-md border border-border bg-transparent px-3.5 py-1.5 text-sm font-medium hover:bg-surface"
               >
                 <User className="h-4 w-4" /> Login
               </Link>
               <Link
                 to="/auth/signup"
-                className="rounded-md bg-primary px-4 py-2 text-sm font-bold text-primary-foreground shadow-[0_0_20px_-6px_var(--gold)] hover:brightness-110"
+                className="rounded-md bg-primary px-3.5 py-1.5 text-sm font-bold text-primary-foreground shadow-[0_0_20px_-6px_var(--gold)] hover:brightness-110"
               >
                 Get Started
               </Link>

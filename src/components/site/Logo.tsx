@@ -25,7 +25,7 @@ export function Logo({ size = "default", className }: LogoProps) {
         aria-hidden
         className={cn(
           "w-auto shrink-0 object-contain",
-          compact ? "h-9 w-9 sm:h-11 lg:h-14 xl:h-[5.25rem]" : "h-[4.5rem] sm:h-[6.3rem] md:h-[7.35rem]",
+          compact ? "h-8 w-8 sm:h-9 lg:h-11 xl:h-12" : "h-[4.5rem] sm:h-[6.3rem] md:h-[7.35rem]",
         )}
       />
         <div

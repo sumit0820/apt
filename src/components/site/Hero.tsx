@@ -24,7 +24,7 @@ export function Hero() {
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_50%,var(--gold-soft),transparent_55%)]"
         />
 
-        <div className="relative z-10 flex flex-col pt-[80px] pb-10 lg:min-h-svh lg:pb-12">
+        <div className="relative z-10 flex flex-col pt-[65px] pb-10 lg:min-h-svh lg:pb-12">
           <div className="grid w-full min-w-0 items-start gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-16">
             <div className="min-w-0 max-w-2xl lg:max-w-xl">
               <div className="hero-animate hero-delay-1 inline-flex max-w-full flex-wrap items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-3 py-1.5 text-[10px] font-bold tracking-wide text-primary shadow-[0_0_20px_-6px_var(--gold)] sm:text-xs">
