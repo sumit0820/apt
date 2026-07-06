@@ -5,8 +5,8 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+          <div className="sm:col-span-2">
             <Logo size="sm" />
             <p className="mt-4 text-sm text-muted-foreground max-w-md">
               Apex Pro Traders is a SEBI Registered Research Analyst firm.

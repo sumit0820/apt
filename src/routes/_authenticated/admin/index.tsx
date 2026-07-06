@@ -61,16 +61,16 @@ function AdminDashboardPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border bg-surface/40">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link to="/"><Logo size="sm" /></Link>
-          <Link to="/dashboard" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary">
-            <ArrowLeft className="h-4 w-4" /> Back to dashboard
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6">
+          <Link to="/" className="min-w-0 shrink"><Logo size="sm" /></Link>
+          <Link to="/dashboard" className="inline-flex shrink-0 items-center gap-2 text-sm text-muted-foreground hover:text-primary">
+            <ArrowLeft className="h-4 w-4" /> <span className="hidden min-[420px]:inline">Back to dashboard</span><span className="min-[420px]:hidden">Back</span>
           </Link>
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl px-4 sm:px-6 py-10">
-        <h1 className="text-3xl font-bold">Admin dashboard</h1>
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
+        <h1 className="text-2xl font-bold sm:text-3xl">Admin dashboard</h1>
 
         <Link
           to="/admin/trades"

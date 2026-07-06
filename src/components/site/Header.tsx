@@ -34,18 +34,18 @@ export function Header({ logoOnly = false }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all ${
+      className={`fixed inset-x-0 top-0 z-50 overflow-x-clip transition-all ${
         logoOnly || scrolled
           ? "bg-background/85 backdrop-blur-lg border-b border-border"
           : "bg-background/40 backdrop-blur-sm"
       }`}
     >
       <div
-        className={`mx-auto flex max-w-7xl items-center px-4 sm:px-6 py-2 ${
+        className={`mx-auto flex max-w-7xl items-center gap-3 px-4 py-2 sm:px-6 ${
           logoOnly ? "justify-start" : "justify-between"
         }`}
       >
-        <Link to="/" aria-label="Apex Pro Traders home">
+        <Link to="/" aria-label="Apex Pro Traders home" className="min-w-0 shrink">
           <Logo size="sm" />
         </Link>
 
@@ -68,7 +68,7 @@ export function Header({ logoOnly = false }: HeaderProps) {
               ))}
             </nav>
 
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-3">
               <Link
                 to="/auth/login"
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-transparent px-4 py-2 text-sm font-medium hover:bg-surface"

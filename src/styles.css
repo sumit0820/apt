@@ -67,15 +67,25 @@
 }
 
 @layer base {
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
   * { border-color: var(--color-border); }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
   }
-  section[id] { scroll-margin-top: 90px; }
+  img, video, iframe {
+    max-width: 100%;
+  }
+  section[id] { scroll-margin-top: 5.5rem; }
+  @media (min-width: 1024px) {
+    section[id] { scroll-margin-top: 6.5rem; }
+  }
 }
 
 @keyframes hero-fade-up {

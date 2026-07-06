@@ -93,15 +93,15 @@ export function LegalShell({ title, updated, children }: { title: string; update
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border bg-surface/40">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link to="/"><Logo size="sm" /></Link>
-          <Link to="/" className="text-sm text-muted-foreground hover:text-primary">← Back to home</Link>
+        <div className="mx-auto flex max-w-4xl items-center justify-between gap-3 px-4 py-4 sm:px-6">
+          <Link to="/" className="min-w-0 shrink"><Logo size="sm" /></Link>
+          <Link to="/" className="shrink-0 text-sm text-muted-foreground hover:text-primary">← Back to home</Link>
         </div>
       </header>
-      <main className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-        <h1 className="text-4xl font-extrabold">{title}</h1>
+      <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-12">
+        <h1 className="text-2xl font-extrabold sm:text-4xl">{title}</h1>
         <p className="mt-2 text-sm text-muted-foreground">Last updated: {updated}</p>
-        <div className="prose prose-invert mt-8 space-y-4 text-sm leading-relaxed text-foreground/90 [&_h2]:text-primary [&_h2]:font-bold [&_h2]:text-lg [&_h2]:mt-8 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1 [&_a]:underline">
+        <div className="prose prose-invert mt-8 space-y-4 break-words text-sm leading-relaxed text-foreground/90 [&_h2]:mt-8 [&_h2]:text-lg [&_h2]:font-bold [&_h2]:text-primary [&_ul]:list-disc [&_ul]:space-y-1 [&_ul]:pl-5 [&_a]:underline">
           {children}
         </div>
       </main>

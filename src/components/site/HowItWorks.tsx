@@ -20,10 +20,10 @@ export function HowItWorks() {
           subtitle="We make it easy for you to access professional research and actionable trade ideas. You focus on execution, we handle the analysis."
         />
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {STEPS.map((s, i) => (
             <div key={s.title} className="relative">
-              <div className="h-full rounded-xl border border-border bg-surface p-6">
+              <div className="h-full rounded-xl border border-border bg-surface p-5 sm:p-6">
                 <div className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground font-bold text-sm">{i + 1}</div>
                 <div className="mt-5 grid h-16 w-16 place-items-center rounded-full border border-primary/40 mx-auto">
                   <s.icon className="h-7 w-7 text-primary" />
@@ -39,24 +39,24 @@ export function HowItWorks() {
         </div>
 
         <div className="mt-10 grid lg:grid-cols-3 gap-4">
-          <div className="lg:col-span-2 rounded-2xl border border-border bg-surface p-6">
+          <div className="lg:col-span-2 rounded-2xl border border-border bg-surface p-4 sm:p-6">
             <h4 className="text-sm font-bold tracking-wider text-primary">HOW YOU'LL RECEIVE OUR RESEARCH</h4>
             <p className="mt-2 text-sm text-muted-foreground">
               All trade ideas and updates are shared through fast, secure and dedicated communication channels.
             </p>
-            <div className="mt-5 grid sm:grid-cols-3 gap-4">
+            <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
               <Channel icon={Send} color="bg-sky-500" name="Telegram" desc="Real-time alerts & updates" />
               <Channel icon={MessageCircle} color="bg-emerald-500" name="WhatsApp" desc="Important updates & notifications" />
               <Channel icon={Mail} color="bg-amber-500" name="Email (Optional)" desc="Market insights & reports" />
             </div>
             <hr className="my-5 border-border" />
-            <div className="flex items-center gap-2 text-sm">
-              <ShieldCheck className="h-4 w-4 text-primary" />
+            <div className="flex flex-wrap items-start gap-2 text-sm">
+              <ShieldCheck className="h-4 w-4 shrink-0 text-primary" />
               <span>No auto-execution. <span className="text-primary font-semibold">You stay in control</span> of your trades.</span>
             </div>
           </div>
 
-          <div className="rounded-2xl border border-border bg-surface p-6">
+          <div className="rounded-2xl border border-border bg-surface p-4 sm:p-6">
             <div className="flex items-center gap-2">
               <ShieldCheck className="h-6 w-6 text-primary" />
               <h4 className="font-bold text-primary">Important Note</h4>
@@ -69,15 +69,26 @@ export function HowItWorks() {
           </div>
         </div>
 
-        <div className="mt-10 rounded-2xl border border-primary/30 bg-surface p-6 flex flex-col md:flex-row md:items-center gap-4">
-          <TrendingUp className="h-12 w-12 text-primary shrink-0" />
-          <div className="flex-1">
-            <h4 className="text-xl font-bold">Ready to experience professional research the smart way?</h4>
-            <p className="text-sm text-muted-foreground">Join thousands of traders and investors who trust our research.</p>
+        <div className="mt-10 rounded-2xl border border-primary/30 bg-surface p-4 sm:p-6">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-6">
+            <div className="flex min-w-0 items-start gap-4 lg:flex-1">
+              <TrendingUp className="h-10 w-10 shrink-0 text-primary sm:h-12 sm:w-12" />
+              <div className="min-w-0">
+                <h4 className="text-lg font-bold leading-snug sm:text-xl">
+                  Ready to experience professional research the smart way?
+                </h4>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Join thousands of traders and investors who trust our research.
+                </p>
+              </div>
+            </div>
+            <Link
+              to="/auth/signup"
+              className="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-bold text-primary-foreground hover:brightness-110 sm:px-6 lg:w-auto lg:whitespace-nowrap"
+            >
+              View Plans & Subscribe <ArrowRight className="h-4 w-4 shrink-0" />
+            </Link>
           </div>
-          <Link to="/auth/signup" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 font-bold text-primary-foreground hover:brightness-110">
-            View Plans & Subscribe <ArrowRight className="h-4 w-4" />
-          </Link>
         </div>
       </div>
     </section>

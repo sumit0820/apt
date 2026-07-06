@@ -28,9 +28,9 @@ export function TradeInsights() {
           title="Sample Trade Insights"
           subtitle="Below are select examples of research-based trade ideas shared with our clients. These are for informational purposes only and do not represent the complete performance."
         />
-        <p className="text-center text-primary text-xl sm:text-2xl font-bold italic mt-2">Illustrative Examples of Our Research.</p>
+        <p className="mt-2 text-center text-lg font-bold italic text-primary sm:text-2xl">Illustrative Examples of Our Research.</p>
 
-        <div className="mt-10 rounded-2xl border border-border bg-surface p-6 grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-10 grid grid-cols-1 gap-5 rounded-2xl border border-border bg-surface p-4 sm:grid-cols-2 sm:gap-6 sm:p-6 lg:grid-cols-4">
           {FEATURES.map((f) => (
             <div key={f.title} className="flex gap-3">
               <div className="grid h-12 w-12 place-items-center rounded-full border border-primary/40 shrink-0">
@@ -45,7 +45,7 @@ export function TradeInsights() {
         </div>
 
         <div className="mt-6 grid lg:grid-cols-3 gap-4">
-          <div className="lg:col-span-2 rounded-2xl border border-border bg-surface p-6">
+          <div className="rounded-2xl border border-border bg-surface p-4 sm:p-6 lg:col-span-2">
             <div className="flex items-start justify-between gap-3 flex-wrap">
               <div>
                 <h3 className="text-lg font-bold flex items-center gap-2"><Target className="h-5 w-5 text-primary" /> Recent Trade Examples</h3>
@@ -64,7 +64,7 @@ export function TradeInsights() {
               <p className="mt-8 text-sm text-muted-foreground">No trade examples published yet.</p>
             ) : (
               <div className="mt-5 overflow-x-auto">
-                <table className="w-full text-sm">
+                <table className="w-full min-w-[640px] text-sm">
                   <thead className="text-left text-xs text-muted-foreground border-b border-border">
                     <tr>
                       <th className="py-2 pr-3">Date</th>
@@ -99,7 +99,7 @@ export function TradeInsights() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-border bg-surface p-6">
+          <div className="rounded-2xl border border-border bg-surface p-4 sm:p-6">
             <h3 className="text-lg font-bold text-primary">Key Note</h3>
             <ul className="mt-4 space-y-3 text-sm">
               {[
@@ -113,23 +113,32 @@ export function TradeInsights() {
                 </li>
               ))}
             </ul>
-            <Link to="/terms" className="mt-5 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 font-semibold text-primary-foreground hover:brightness-110">
+            <Link to="/terms" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground hover:brightness-110 sm:w-auto">
               <Download className="h-4 w-4" /> Read Full Disclaimer
             </Link>
           </div>
         </div>
 
-        <div className="mt-10 rounded-2xl border border-primary/30 bg-surface p-6 flex flex-col md:flex-row md:items-center gap-4">
-          <div className="grid h-14 w-14 place-items-center rounded-full border border-primary/40 shrink-0">
-            <Target className="h-6 w-6 text-primary" />
+        <div className="mt-10 rounded-2xl border border-primary/30 bg-surface p-4 sm:p-6">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-6">
+            <div className="flex min-w-0 items-start gap-4 lg:flex-1">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/40 sm:h-14 sm:w-14">
+                <Target className="h-6 w-6 text-primary" />
+              </div>
+              <div className="min-w-0">
+                <h4 className="text-lg font-bold leading-snug sm:text-xl">Research. Discipline. Consistency.</h4>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Our focus is on delivering high-quality research and actionable trade ideas to help you make informed decisions.
+                </p>
+              </div>
+            </div>
+            <a
+              href="#strategies"
+              className="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-bold text-primary-foreground hover:brightness-110 sm:px-6 lg:w-auto lg:whitespace-nowrap"
+            >
+              Explore Our Strategies <ArrowRight className="h-4 w-4 shrink-0" />
+            </a>
           </div>
-          <div className="flex-1">
-            <h4 className="text-xl font-bold">Research. Discipline. Consistency.</h4>
-            <p className="text-sm text-muted-foreground">Our focus is on delivering high-quality research and actionable trade ideas to help you make informed decisions.</p>
-          </div>
-          <a href="#strategies" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 font-bold text-primary-foreground hover:brightness-110">
-            Explore Our Strategies <ArrowRight className="h-4 w-4" />
-          </a>
         </div>
       </div>
     </section>

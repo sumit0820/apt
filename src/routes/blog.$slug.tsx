@@ -31,7 +31,7 @@ function BlogPostPage() {
           <Link to="/" aria-label="Apex Pro Traders home">
             <Logo size="sm" />
           </Link>
-          <Link to="/" hash="blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary">
+          <Link to="/" hash="blog" className="inline-flex shrink-0 items-center gap-2 text-sm text-muted-foreground hover:text-primary">
             <ArrowLeft className="h-4 w-4" /> Back to blog
           </Link>
         </div>
@@ -52,7 +52,7 @@ function BlogPostPage() {
             </Link>
           </div>
         ) : (
-          <article>
+          <article className="break-words">
             <div className="flex flex-wrap items-center justify-between gap-3 text-xs">
               <span className="rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 font-semibold text-primary">
                 {post.tag}
@@ -64,7 +64,7 @@ function BlogPostPage() {
             </div>
 
             <BookOpen className="mt-8 h-8 w-8 text-primary" />
-            <h1 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">{post.title}</h1>
+            <h1 className="mt-4 break-words text-2xl font-extrabold leading-tight sm:text-3xl md:text-4xl">{post.title}</h1>
             <p className="mt-4 text-base text-muted-foreground">{post.excerpt}</p>
 
             <div className="mt-8 space-y-5 border-t border-border pt-8 text-sm leading-relaxed text-foreground/90 sm:text-base">

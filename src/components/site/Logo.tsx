@@ -25,15 +25,15 @@ export function Logo({ size = "default", className }: LogoProps) {
         aria-hidden
         className={cn(
           "w-auto shrink-0 object-contain",
-          compact ? "h-[5.25rem] sm:h-[5.25rem]" : "h-[6.3rem] sm:h-[7.35rem]",
+          compact ? "h-9 w-9 sm:h-11 lg:h-14 xl:h-[5.25rem]" : "h-[4.5rem] sm:h-[6.3rem] md:h-[7.35rem]",
         )}
       />
-      <div
-        className={cn(
-          "flex items-stretch",
-          compact ? "gap-2 sm:gap-2.5" : "gap-2.5 sm:gap-3",
-        )}
-      >
+        <div
+          className={cn(
+            "flex items-stretch",
+            compact ? "hidden min-[420px]:flex gap-1.5 sm:gap-2.5" : "gap-2.5 sm:gap-3",
+          )}
+        >
         <span aria-hidden className="w-px shrink-0 bg-foreground/30" />
         <div
           className={cn(

@@ -64,13 +64,13 @@ export function Contact() {
 
 function ContactCard({ icon: Icon, title, value, href }: { icon: typeof Mail; title: string; value: string; href: string }) {
   return (
-    <a href={href} target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl border border-border bg-surface p-5 hover:border-primary/40 transition">
-      <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 border border-primary/30">
+    <a href={href} target="_blank" rel="noreferrer" className="flex min-w-0 items-center gap-4 rounded-2xl border border-border bg-surface p-5 transition hover:border-primary/40">
+      <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 bg-primary/10">
         <Icon className="h-5 w-5 text-primary" />
       </div>
-      <div>
+      <div className="min-w-0">
         <div className="text-xs text-muted-foreground">{title}</div>
-        <div className="font-bold">{value}</div>
+        <div className="break-all font-bold sm:break-normal">{value}</div>
       </div>
     </a>
   );

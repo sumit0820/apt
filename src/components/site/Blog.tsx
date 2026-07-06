@@ -32,13 +32,13 @@ export function Blog() {
         ) : posts.length === 0 ? (
           <p className="mt-12 text-center text-sm text-muted-foreground">No blog posts published yet.</p>
         ) : (
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((p) => (
               <article
                 key={p.id}
-                className="group rounded-2xl border border-border bg-surface p-6 transition hover:border-primary/40 hover:shadow-[0_16px_40px_-24px_var(--gold)]"
+                className="group rounded-2xl border border-border bg-surface p-5 transition hover:border-primary/40 hover:shadow-[0_16px_40px_-24px_var(--gold)] sm:p-6"
               >
-                <div className="flex items-center justify-between text-xs">
+                <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 text-xs">
                   <span className="rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 font-semibold text-primary">
                     {p.tag}
                   </span>

@@ -17,7 +17,7 @@ export function HeroStats() {
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-5">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-5">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 90} y={20}>
               <div className="group relative overflow-hidden rounded-xl border border-border/80 bg-surface/80 p-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/35 hover:shadow-[0_12px_40px_-16px_var(--gold)]">

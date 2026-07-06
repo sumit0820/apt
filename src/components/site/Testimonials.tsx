@@ -56,7 +56,7 @@ function TestimonialCard({ item, index }: { item: TestimonialRecord; index: numb
 
   return (
     <article
-      className="group relative h-full rounded-2xl border border-border/80 bg-surface/90 p-6 backdrop-blur-sm transition-all duration-500 hover:border-primary/30 hover:shadow-[0_20px_50px_-24px_var(--gold)]"
+      className="group relative h-full rounded-2xl border border-border/80 bg-surface/90 p-5 backdrop-blur-sm transition-all duration-500 hover:border-primary/30 hover:shadow-[0_20px_50px_-24px_var(--gold)] sm:p-6"
       style={{ animationDelay: `${index * 80}ms` }}
     >
       <div
@@ -159,24 +159,24 @@ export function Testimonials() {
             <TestimonialCard item={testimonials[0]} index={0} />
           </div>
         ) : (
-          <div className="relative mt-12 px-10 sm:px-14">
+          <div className="relative mt-12 px-4 sm:px-10 md:px-14">
             <Carousel
               setApi={setCarouselApi}
               opts={{ align: "start", loop: true, containScroll: "trimSnaps" }}
               className="w-full"
             >
-              <CarouselContent className="-ml-4 py-2">
+              <CarouselContent className="-ml-3 py-2 sm:-ml-4">
                 {testimonials.map((item, index) => (
                   <CarouselItem
                     key={item.id}
-                    className="basis-[88%] py-2 pl-4 sm:basis-[70%] md:basis-[52%] lg:basis-[42%] xl:basis-[34%]"
+                    className="basis-[92%] py-2 pl-3 sm:basis-[88%] sm:pl-4 md:basis-[52%] lg:basis-[42%] xl:basis-[34%]"
                   >
                     <TestimonialCard item={item} index={index} />
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="left-0 sm:-left-2 z-20 border-primary/30 bg-surface/90 hover:bg-surface hover:border-primary/50" />
-              <CarouselNext className="right-0 sm:-right-2 z-20 border-primary/30 bg-surface/90 hover:bg-surface hover:border-primary/50" />
+              <CarouselPrevious className="left-0 z-20 h-8 w-8 border-primary/30 bg-surface/90 hover:border-primary/50 hover:bg-surface sm:-left-2 sm:h-9 sm:w-9" />
+              <CarouselNext className="right-0 z-20 h-8 w-8 border-primary/30 bg-surface/90 hover:border-primary/50 hover:bg-surface sm:-right-2 sm:h-9 sm:w-9" />
             </Carousel>
           </div>
         )}
