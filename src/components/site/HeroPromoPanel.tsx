@@ -2,7 +2,7 @@ import { ShieldCheck } from "lucide-react";
 
 export function HeroPromoPanel() {
   return (
-    <div className="flex w-full flex-col items-center text-center lg:ml-[10%]">
+    <div className="flex w-full flex-col items-center text-center lg:ml-[5%] lg:translate-y-[10%]">
       <div className="w-full max-w-[18.2rem] rounded-lg border border-border/80 bg-surface/90 backdrop-blur-sm px-3 py-2.5 sm:px-2.5 sm:py-2.5 hero-promo-card">
         <div className="flex items-center gap-2 text-left">
           <div className="grid h-6 w-6 shrink-0 place-items-center rounded-md border border-primary/40 bg-primary/10">
